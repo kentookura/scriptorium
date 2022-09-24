@@ -1,0 +1,252 @@
+{
+  "version": "latexrun-db-v2",
+  "tasks": {
+    "latex::main.tex": {
+      "deps": [
+        [
+          "args",
+          [],
+          [
+            "pdflatex",
+            "-interaction",
+            "nonstopmode",
+            "-recorder",
+            "-output-directory",
+            "latex.out",
+            "main.tex"
+          ]
+        ],
+        [
+          "env",
+          [
+            "TEXMFOUTPUT"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TEXINPUTS"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TEXFORMATS"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TEXPOOL"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TFMFONTS"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "PATH"
+          ],
+          "/nix/store/v48s6iddb518j9lc1pk3rcn3x8c2ff0j-bash-interactive-5.1-p16/bin:/nix/store/knssayvl4p7gfapib4wcfhzy14169kva-patchelf-0.14.5/bin:/nix/store/ag2bpk0lzjvj409znklrz5krkpc5imzs-gcc-wrapper-11.3.0/bin:/nix/store/as1xzrm2921pnxx4jvxj39jn4v88wdy1-gcc-11.3.0/bin:/nix/store/h0cnbmfcn93xm5dg2x27ixhag1cwndga-glibc-2.34-210-bin/bin:/nix/store/7jr7pr4c6yb85xpzay5xafs5zlcadkhz-coreutils-9.0/bin:/nix/store/wp7kc5y840ldi5sd8j81fj4dabccff2d-binutils-wrapper-2.38/bin:/nix/store/rq6bh3qfrqnyqwik0w3q6w180zg3w2pa-binutils-2.38/bin:/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final/bin:/nix/store/7jr7pr4c6yb85xpzay5xafs5zlcadkhz-coreutils-9.0/bin:/nix/store/140f6s4nwiawrr3xyxarmcv2mk62m62y-findutils-4.9.0/bin:/nix/store/35swvg68q1j3m9fbhcdnqwk9mlm8plvn-diffutils-3.8/bin:/nix/store/lgvd2fh4cndlv8mnyy49jp1nplpml3xp-gnused-4.8/bin:/nix/store/qd9jxc0q00cr7fp30y6jbbww20gj33lg-gnugrep-3.7/bin:/nix/store/w3p77mkdy3pigg12iyha8y9dqakhjsxn-gawk-5.1.1/bin:/nix/store/jm7czg4lgfhiphkyjwn1k1i8liqqizgi-gnutar-1.34/bin:/nix/store/vqpkbr3isafl4867app44w636zrkr9wp-gzip-1.12/bin:/nix/store/fkwcqfw3gcspmpmxqxqnxjja74sg207g-bzip2-1.0.6.0.2-bin/bin:/nix/store/4gkcrzpn31sb12fnzclyfzhpd8xh8l6x-gnumake-4.3/bin:/nix/store/iffl6dlplhv22i2xy7n1w51a5r631kmi-bash-5.1-p16/bin:/nix/store/c0hmdlwdd85gzmilafg4gzzdb2vpg176-patch-2.7.6/bin:/nix/store/kyg5qxx0nl5hfjx0kgw120b85i4l6i8y-xz-5.2.5-bin/bin:/nix/store/v48s6iddb518j9lc1pk3rcn3x8c2ff0j-bash-interactive-5.1-p16/bin:/nix/store/knssayvl4p7gfapib4wcfhzy14169kva-patchelf-0.14.5/bin:/nix/store/ag2bpk0lzjvj409znklrz5krkpc5imzs-gcc-wrapper-11.3.0/bin:/nix/store/as1xzrm2921pnxx4jvxj39jn4v88wdy1-gcc-11.3.0/bin:/nix/store/h0cnbmfcn93xm5dg2x27ixhag1cwndga-glibc-2.34-210-bin/bin:/nix/store/7jr7pr4c6yb85xpzay5xafs5zlcadkhz-coreutils-9.0/bin:/nix/store/wp7kc5y840ldi5sd8j81fj4dabccff2d-binutils-wrapper-2.38/bin:/nix/store/rq6bh3qfrqnyqwik0w3q6w180zg3w2pa-binutils-2.38/bin:/nix/store/8vi2f9b53l9p3nzsda6n2qyn6f8q36d1-latexrun-unstable-2015-11-18/bin:/nix/store/7jr7pr4c6yb85xpzay5xafs5zlcadkhz-coreutils-9.0/bin:/nix/store/140f6s4nwiawrr3xyxarmcv2mk62m62y-findutils-4.9.0/bin:/nix/store/35swvg68q1j3m9fbhcdnqwk9mlm8plvn-diffutils-3.8/bin:/nix/store/lgvd2fh4cndlv8mnyy49jp1nplpml3xp-gnused-4.8/bin:/nix/store/qd9jxc0q00cr7fp30y6jbbww20gj33lg-gnugrep-3.7/bin:/nix/store/w3p77mkdy3pigg12iyha8y9dqakhjsxn-gawk-5.1.1/bin:/nix/store/jm7czg4lgfhiphkyjwn1k1i8liqqizgi-gnutar-1.34/bin:/nix/store/vqpkbr3isafl4867app44w636zrkr9wp-gzip-1.12/bin:/nix/store/fkwcqfw3gcspmpmxqxqnxjja74sg207g-bzip2-1.0.6.0.2-bin/bin:/nix/store/4gkcrzpn31sb12fnzclyfzhpd8xh8l6x-gnumake-4.3/bin:/nix/store/iffl6dlplhv22i2xy7n1w51a5r631kmi-bash-5.1-p16/bin:/nix/store/c0hmdlwdd85gzmilafg4gzzdb2vpg176-patch-2.7.6/bin:/nix/store/kyg5qxx0nl5hfjx0kgw120b85i4l6i8y-xz-5.2.5-bin/bin:/run/wrappers/bin:/home/kento/.nix-profile/bin:/etc/profiles/per-user/kento/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin:/home/kento/bin"
+        ],
+        [
+          "file",
+          [
+            "/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final/share/texmf/fonts/tfm/public/cm/cmsy10.tfm"
+          ],
+          "0ca13d421ac7133271aed7c935099ecf3d1d08ac9e15f81acb34a16564ab8a46"
+        ],
+        [
+          "file",
+          [
+            "/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final/share/texmf/fonts/tfm/public/cm/cmr17.tfm"
+          ],
+          "86b6e8a52aae6ad1655e32099e12bd2904b158aba4c8afb74143266d2d9cd18f"
+        ],
+        [
+          "file",
+          [
+            "/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map"
+          ],
+          "0bad1c137f90048db612046c14052addcdd8de9672ce78a508241e56cc75008d"
+        ],
+        [
+          "file",
+          [
+            "latex.out/main.aux"
+          ],
+          "1dbaab99ec3a713562dee6e7892147f2e887cff9c3095844a58b3cb2dacdcee6"
+        ],
+        [
+          "file",
+          [
+            "/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final/share/texmf/fonts/type1/public/amsfonts/cm/cmbx12.pfb"
+          ],
+          "c838238f31d86a9f198873dfaf501601a4fc966845b9c59e7dc251c4e85d1f1f"
+        ],
+        [
+          "file",
+          [
+            "/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final/share/texmf/fonts/tfm/public/cm/cmr12.tfm"
+          ],
+          "1ce8af37ed38e93940829d3540e494eaaddc5201758d036b9074467e70a738dc"
+        ],
+        [
+          "file",
+          [
+            "/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final/share/texmf-var/web2c/pdftex/pdflatex.fmt"
+          ],
+          "0a7a94a5720d744767b7084bddedec442fa2f33d52eb1501836adb4bedb51169"
+        ],
+        [
+          "file",
+          [
+            "/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final/share/texmf/fonts/tfm/public/cm/cmbx12.tfm"
+          ],
+          "0eb2f13840155007c2d3c59b074322a3aa7358b9643aa314f3146468ae7f0806"
+        ],
+        [
+          "file",
+          [
+            "/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final/share/texmf/web2c/texmf.cnf"
+          ],
+          "c4cf28ed6e9d34aa246172ae9d54b1a676add41a838dbb38c57fd701810f0f79"
+        ],
+        [
+          "file",
+          [
+            "main.tex"
+          ],
+          "c85bd3185573415a8d5197c625091c1a327354ea43c3d69daa160997e2fa2dbb"
+        ],
+        [
+          "file",
+          [
+            "/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final/share/texmf/tex/latex/l3backend/l3backend-pdftex.def"
+          ],
+          "b9f1c377ea11810e847e866581e34471525c843cca5612d162d0f94f94d0b87b"
+        ],
+        [
+          "file",
+          [
+            "/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final/share/texmf/tex/latex/base/article.cls"
+          ],
+          "988fb3e599df7e5b545e4253829dab11f0c7bd7827b79d32c2aaadfb52db6f6c"
+        ],
+        [
+          "file",
+          [
+            "/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final/share/texmf/fonts/type1/public/amsfonts/cm/cmr12.pfb"
+          ],
+          "9b58bfa828b9553b7c8331cf26c45443b836f8aab62e820b40a5b65c8531dd42"
+        ],
+        [
+          "file",
+          [
+            "/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final/share/texmf/tex/latex/base/size12.clo"
+          ],
+          "750c804ea549929991e6d010d56871ae9dd039ad02007b7d47c3159f49e2199d"
+        ],
+        [
+          "file",
+          [
+            "/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final/share/texmf/fonts/map/fontname/texfonts.map"
+          ],
+          "d9693993efdc7d0b9ab3df777589995d43e24eeae95f12b6a230a19caadeaa42"
+        ],
+        [
+          "file",
+          [
+            "/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final/share/texmf/fonts/type1/public/amsfonts/cm/cmr17.pfb"
+          ],
+          "465827b4702e12f7deea159c8084753ffc27998963de516e490bd7bd5bed41dd"
+        ],
+        [
+          "file",
+          [
+            "/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final/share/texmf/fonts/tfm/public/cm/cmmi12.tfm"
+          ],
+          "79563547084d85388e6909888f9fa7f5cad33bdda44ca6b25b362e1d301db539"
+        ],
+        [
+          "file",
+          [
+            "latex.out/main.pdf"
+          ],
+          "c23dfc7bce140b54dc08667858b33ec04efd68f39e8559b86be1e84e157f5a74"
+        ],
+        [
+          "file",
+          [
+            "latex.out/main.fls"
+          ],
+          "81516aaa74ee448dede8b3309e7136e771d882d20b680543353f41a890fbe0a5"
+        ],
+        [
+          "file",
+          [
+            "latex.out/main.log"
+          ],
+          "cbee950b08563333b787e0147b4372eaae2dccd15f6a590479e836ff68cc5070"
+        ]
+      ],
+      "output_files": {
+        "latex.out/main.pdf": "c23dfc7bce140b54dc08667858b33ec04efd68f39e8559b86be1e84e157f5a74",
+        "latex.out/main.aux": "1dbaab99ec3a713562dee6e7892147f2e887cff9c3095844a58b3cb2dacdcee6",
+        "latex.out/main.fls": "81516aaa74ee448dede8b3309e7136e771d882d20b680543353f41a890fbe0a5",
+        "latex.out/main.log": "cbee950b08563333b787e0147b4372eaae2dccd15f6a590479e836ff68cc5070"
+      },
+      "extra": {
+        "jobname": "latex.out/main",
+        "outname": "latex.out/main.pdf",
+        "status": 0
+      }
+    },
+    "latex_commit::main.tex": {
+      "deps": [
+        [
+          "latex",
+          [],
+          [
+            0,
+            "latex.out/main.pdf"
+          ]
+        ],
+        [
+          "file",
+          [
+            "latex.out/main.pdf"
+          ],
+          "c23dfc7bce140b54dc08667858b33ec04efd68f39e8559b86be1e84e157f5a74"
+        ],
+        [
+          "file",
+          [
+            "main.pdf"
+          ],
+          "c23dfc7bce140b54dc08667858b33ec04efd68f39e8559b86be1e84e157f5a74"
+        ]
+      ],
+      "output_files": {
+        "main.pdf": "c23dfc7bce140b54dc08667858b33ec04efd68f39e8559b86be1e84e157f5a74"
+      },
+      "extra": null
+    }
+  },
+  "clean": {
+    "latex.out/main.fls": "81516aaa74ee448dede8b3309e7136e771d882d20b680543353f41a890fbe0a5",
+    "latex.out/main.pdf": "c23dfc7bce140b54dc08667858b33ec04efd68f39e8559b86be1e84e157f5a74",
+    "latex.out/main.aux": "1dbaab99ec3a713562dee6e7892147f2e887cff9c3095844a58b3cb2dacdcee6",
+    "latex.out/main.log": "cbee950b08563333b787e0147b4372eaae2dccd15f6a590479e836ff68cc5070",
+    "main.pdf": "c23dfc7bce140b54dc08667858b33ec04efd68f39e8559b86be1e84e157f5a74"
+  }
+}

@@ -1,0 +1,81 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/NixOS.org) (preloaded format=pdflatex 1980.1.1)  24 SEP 2022 14:59
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24>
+(/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final
+/share/texmf/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+
+(/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final
+/share/texmf/tex/latex/base/size12.clo
+File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final
+/share/texmf/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count193
+\l__pdf_internal_box=\box50
+) (latex.out/main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 5.
+
+[1
+
+{/nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final
+/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (latex.out/main.aux) ) 
+Here is how much of TeX's memory you used:
+ 412 strings out of 479392
+ 8025 string characters out of 5849273
+ 295326 words of memory out of 5000000
+ 18524 multiletter control sequences out of 15000+600000
+ 471375 words of font info for 35 fonts, out of 8000000 for 9000
+ 430 hyphenation exceptions out of 8191
+ 33i,6n,38p,225b,191s stack positions out of 5000i,500n,10000p,200000b,80000s
+</n
+ix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final/sh
+are/texmf/fonts/type1/public/amsfonts/cm/cmbx12.pfb></nix/store/5srskykp7ghhj00
+7kvzzxlvjiqzd3cnp-texlive-combined-medium-2021-final/share/texmf/fonts/type1/pu
+blic/amsfonts/cm/cmr12.pfb></nix/store/5srskykp7ghhj007kvzzxlvjiqzd3cnp-texlive
+-combined-medium-2021-final/share/texmf/fonts/type1/public/amsfonts/cm/cmr17.pf
+b>
+Output written on latex.out/main.pdf (1 page, 34561 bytes).
+PDF statistics:
+ 23 PDF objects out of 1000 (max. 8388607)
+ 13 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
