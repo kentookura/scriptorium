@@ -5,9 +5,17 @@
 (/skrɪpˈtɔːriəm/), is commonly used to refer to a room in medieval European monestaries devoted to the writing, copying and illuminating of manuscripts commonly handled by the monastic scribes
 
 This project provides an immutable environment for managing digital documents.
-At the moment the main features are a template for a nix flake which compiles a
-latex document and a development shell with basic tools for compiling tex and
-using various npm packages. More to come.
+
+### Features
+
+- template for a latex document 
+- development shell with pandoc, a texlive distribution, a latex language server
+  and some other stuff, see `shell.nix`.
+- a relatively developed neovim configuration (my personal one) for editing
+  markdown and latex
+
+I plan on working on making this available for more platforms other than linux
+but I have other priorities.
 
 ## How to use
 
@@ -32,3 +40,6 @@ will show you the two outputs of the template. A development shell and a package
 ```
   nix flake build
 ```
+
+## TODO
+enable cachix for faster build times

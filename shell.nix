@@ -2,6 +2,13 @@
 with pkgs;
   mkShell {
     buildInputs = [
+      neovimKento
+      pandoc
+      tex-match
+      texlab
+      latexrun
+      pandoc
+      texlive.combined.scheme-full
       nodejs
       yarn
       yarn2nix

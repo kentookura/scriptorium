@@ -5,6 +5,7 @@
     nixpkgs.url = github:NixOS/nixpkgs/nixos-21.05;
     flake-utils.url = github:numtide/flake-utils;
     documents.url = github:kentookura/latex-flake;
+    neovim.url = github:kentookura/neovim;
   };
 
   outputs = {
@@ -12,9 +13,15 @@
     nixpkgs,
     flake-utils,
     documents,
+    neovim,
   } @ inputs: let
     pkgs = import inputs.nixpkgs {
       system = "x86_64-linux";
+      overlays = with inputs; [
+        (self: super: {
+          neovimKento = neovim.packages."x86_64-linux".neovim;
+        })
+      ];
     };
   in rec {
     devShells."x86_64-linux".default = import ./shell.nix {inherit pkgs;};
