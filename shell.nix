@@ -12,6 +12,6 @@ with pkgs;
       nodejs
     ];
     shellHook = ''
-      export PATH="./node_modules/.bin:$PATH"
+      export PATH="/home/kento/scriptorium/node_modules/.bin:$PATH"
     '';
   }

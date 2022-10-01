@@ -5,30 +5,30 @@
 (/skrɪpˈtɔːriəm/), is commonly used to refer to a room in medieval European monestaries devoted to the writing, copying and illuminating of manuscripts commonly handled by the monastic scribes
 
 This project provides an immutable environment for managing digital documents.
+At the moment the main features are a template for a nix flake which compiles a
+latex document and a development shell with basic tools for compiling tex and
+using various npm packages. More to come.
 
-    templates = {
-    documents = {
-        doc = documents.build {
-          config = {
-            name = "Kento_Okura_Bsc_Thesis_2022";
-            title = ''The Geometry and Logic of the \\'Etale Site'';
-            author = "Kento Okura";
-            root_dir = ./thesis;
-            root_file = "main.tex";
-            advisor = "Ivan Di Liberti (Stockholm University)";
-            degree_code = "A 033621";
-            date = "Wien, im Monat September 2022";
-            field = "Mathematik";
-          };
-    };
-  };
-}
+## How to use
 
-At the moment, running nix flake show shows a linux package 'texBuilder'.
-The plan is to provide a bunch of different builders, such as texBuilder or
-moodleBuilder for building documents
+Install [direnv](https://direnv.net) and [nix](https://nixos.org/). After [enabling nix flakes](https://nixos.wiki/wiki/flakes) you can initialise a latex document by navigating to a new directory and running
+```
+  nix flake init -t github:kentookura/scriptorium#default
+```
+Run
+```
+  direnv allow
+```
+to enable direnv to automatically enter the development shell when you change to
+this directory.
 
-# thesis
-
-The thesis/flake.nix file defines a configurable package which builds a latex
-document. I am trying to get the title page template to work
+Entering
+```
+  nix flake show
+```
+will show you the two outputs of the template. A development shell and a package. The
+`devShells` output defines the environment which direnv loads. The package
+`default` is a simple latex document which you can compile by running 
+```
+  nix flake build
+```

@@ -6,14 +6,17 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1664658193,
-        "narHash": "sha256-4Wr3+RcRcd+6cycWij3R4e227oNClbjoQNIaWiBlgvc=",
-        "path": "/home/kento/scriptorium/documents",
-        "type": "path"
+        "lastModified": 1664658444,
+        "narHash": "sha256-rc/7yLIoal+8RVS6NkbecHmIi+gUYjR2r6OHqa0FjJY=",
+        "owner": "kentookura",
+        "repo": "latex-flake",
+        "rev": "86ebd388eb8668304e917c911a026cee301314f4",
+        "type": "github"
       },
       "original": {
-        "path": "/home/kento/scriptorium/documents",
-        "type": "path"
+        "owner": "kentookura",
+        "repo": "latex-flake",
+        "type": "github"
       }
     },
     "flake-utils": {

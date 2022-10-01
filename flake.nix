@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixos-21.05;
     flake-utils.url = github:numtide/flake-utils;
-    documents.url = path:/home/kento/scriptorium/documents;
+    documents.url = github:kentookura/latex-flake;
   };
 
   outputs = {
