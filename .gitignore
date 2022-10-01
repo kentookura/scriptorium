@@ -1,1 +1,14 @@
 result
+.direnv
+.nix-node
+node_modules
+frontend
+package.json
+purs-nix
+notes
+purescript-halogen-realworld
+thesis
+yarn.lock
+*.pdf
+documents
+uni

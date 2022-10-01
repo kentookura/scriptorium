@@ -2,9 +2,10 @@ pkgs: attrs:
   with pkgs;
   let defaultAttrs = {
     builder = "${latexrun}/bin/latexrun";
-    args = [ ./buildTex ];
+    args = [ ./buildTex.sh ];
     baseInputs = [latexrun texDistribution];
     buildInputs = [];
-    system = buitlins.currentSystem;
+    system = currentSystem;
   };
+  in
   derivation (defaultAttrs // attrs)

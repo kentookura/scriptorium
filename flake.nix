@@ -1,41 +1,29 @@
 {
-  description = "A cozy place to chill, write some maths and hack around";
+  description = "Scriptorium (/skrɪpˈtɔːriəm/), is commonly used to refer to a room in medieval European monestaries devoted to the writing, copying and illuminating of manuscripts commonly handled by the monastic scribes";
+
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixos-21.05;
     flake-utils.url = github:numtide/flake-utils;
+    documents.url = path:/home/kento/scriptorium/documents;
   };
 
   outputs = {
     self,
     nixpkgs,
     flake-utils,
-  }: let
-    defineShellCommand = pkgs.writeShellScriptBin;
-    pkgs = nixpkgs.legacyPackages.x86_64-linux;
-    texBuilder = import ./builders/tex.nix pkgs;
-    texDistribution = pkgs.texlive.combine {
-      inherit
-        (pkgs.texlive)
-        scheme-basic
-        nicematrix
-        fontspec
-        latexmk
-        pgf
-        ;
+    documents,
+  } @ inputs: let
+    pkgs = import inputs.nixpkgs {
+      system = "x86_64-linux";
     };
-    thesis = {
-      title = "Kento_Okura_Thesis";
-      root_file = "main.tex";
-      directory = ./thesis;
-    };
-    documents = {
-      thesis = texBuilder {
-        name = thesis.title;
-        src = thesis.directory;
+  in rec {
+    devShells."x86_64-linux".default = import ./shell.nix {inherit pkgs;};
+    templates = {
+      default = {
+        path = ./templates/default;
+        description = "Uni Wien Latex Template";
       };
     };
-  in 
-  rec {
-    defaultPackage.x86_64-linux = documents.thesis;
+    packages."x86_64-linux".default = documents.packages."x86_64-linux".default;
   };
 }
