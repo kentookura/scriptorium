@@ -16,6 +16,7 @@
     neovim,
   } @ inputs: let
     pkgs = import inputs.nixpkgs {
+      config.allowUnfree = true;
       system = "x86_64-linux";
       overlays = with inputs; [
         (self: super: {
