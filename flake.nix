@@ -22,6 +22,18 @@
         (self: super: {
           neovimKento = neovim.packages."x86_64-linux".neovim;
         })
+        (self: super: {
+          vscodeKento = with pkgs;
+            vscode-with-extensions.override {
+              vscode = vscodium;
+              vscodeExtensions = with vscode-extensions; [
+                james-yu.latex-workshop
+                #arrterian.nix-env-selector
+                bbenoist.Nix
+                jnoortheen.nix-ide
+              ];
+            };
+        })
       ];
     };
   in rec {

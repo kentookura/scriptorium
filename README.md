@@ -13,6 +13,7 @@ This project provides an immutable environment for managing digital documents.
   and some other stuff, see `shell.nix`.
 - a relatively developed neovim configuration (my personal one) for editing
   markdown and latex
+- vscodium with some nix and latex extensions installed
 
 I plan on working on making this available for more platforms other than linux
 but I have other priorities.
@@ -28,7 +29,10 @@ Run
   direnv allow
 ```
 to enable direnv to automatically enter the development shell when you change to
-this directory.
+this directory. This command will probably take a while to finish when running
+for the first time. After it completes, my neovim config and vscodium will be
+available when you change to this directory. Try running `codium`. Getting an
+emacs config into here would be cool.
 
 Entering
 ```

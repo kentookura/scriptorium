@@ -1,8 +1,9 @@
 {pkgs ? import <nixpkgs> {}}:
-with pkgs;
+with pkgs; let
+in
   mkShell {
     buildInputs = [
-      vscode
+      vscodeKento
       neovimKento
       pandoc
       tex-match
@@ -20,7 +21,6 @@ with pkgs;
       nodejs
     ];
     shellHook = ''
-      export NIXPKGS_ALLLOW_UNFREE=1
       export PATH="/home/kento/scriptorium/node_modules/.bin:$PATH"
     '';
   }
