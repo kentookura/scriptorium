@@ -44,6 +44,7 @@ will show you the two outputs of the template. A development shell and a package
 ```
   nix flake build
 ```
+after which the pdf will be available in the `result` folder.
 
 ## TODO
 enable cachix for faster build times
