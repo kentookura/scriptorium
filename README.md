@@ -1,7 +1,5 @@
 # Scriptorium 
 
-![](./assets/Escribano.jpg)
-
 (/skrɪpˈtɔːriəm/), is commonly used to refer to a room in medieval European monestaries devoted to the writing, copying and illuminating of manuscripts commonly handled by the monastic scribes
 
 This project provides an immutable environment for managing digital documents.
