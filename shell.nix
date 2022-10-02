@@ -3,14 +3,15 @@ with pkgs; let
 in
   mkShell {
     buildInputs = [
-      vscodeKento
-      neovimKento
       pandoc
-      tex-match
       texlab
-      latexrun
       pandoc
       texlive.combined.scheme-full
+      python38
+      vscodeKento
+      neovimKento
+      tex-match
+      latexrun
       nodejs
       yarn
       yarn2nix

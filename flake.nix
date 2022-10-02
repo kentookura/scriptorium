@@ -6,6 +6,7 @@
     flake-utils.url = github:numtide/flake-utils;
     documents.url = github:kentookura/latex-flake;
     neovim.url = github:kentookura/neovim;
+    doom-emacs.url = github:vlaci/nix-doom-emacs;
   };
 
   outputs = {
@@ -14,6 +15,7 @@
     flake-utils,
     documents,
     neovim,
+    doom-emacs,
   } @ inputs: let
     pkgs = import inputs.nixpkgs {
       config.allowUnfree = true;
@@ -21,6 +23,9 @@
       overlays = with inputs; [
         (self: super: {
           neovimKento = neovim.packages."x86_64-linux".neovim;
+        })
+        (self: super: {
+          doom-emacs = doom-emacs.packages."x86_64-linux".default;
         })
         (self: super: {
           vscodeKento = with pkgs;
@@ -44,6 +49,7 @@
         description = "Uni Wien Latex Template";
       };
     };
+    homeManagerModules.doom-emacs = doom-emacs.hmModule;
     packages."x86_64-linux".default = documents.packages."x86_64-linux".default;
   };
 }

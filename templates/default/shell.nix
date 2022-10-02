@@ -2,14 +2,10 @@
 with pkgs;
   mkShell {
     buildInputs = [
-      nodejs
-      yarn
-      yarn2nix
-      nodePackages.bower
-      nodePackages.pnpm
-      nodePackages.typescript
-      sass
-      nodejs
+      pandoc
+      texlab
+      pandoc
+      texlive.combined.scheme-full
     ];
     shellHook = ''
       export PATH="./node_modules/.bin:$PATH"
