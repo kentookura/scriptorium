@@ -2,7 +2,6 @@
 with pkgs;
   mkShell {
     buildInputs = [
-      pandoc
       texlab
       pandoc
       texlive.combined.scheme-full

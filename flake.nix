@@ -7,7 +7,6 @@
     documents.url = github:kentookura/latex-flake;
     neovim.url = github:kentookura/neovim;
     doom-emacs.url = github:vlaci/nix-doom-emacs;
-    frontend.url = path:./scriptorium/frontend;
     home-manager.url = github:nix-community/home-manager;
   };
 
@@ -18,7 +17,6 @@
     documents,
     neovim,
     doom-emacs,
-    frontend,
     home-manager,
   } @ inputs: let
     specialArgs = {
@@ -48,14 +46,13 @@
       ];
     };
   in rec {
-    inherit frontend;
     devShells."x86_64-linux".default = import ./shell.nix {
       inherit pkgs;
       config = {};
     };
     templates = {
       default = {
-        path = ./templates/default;
+        path = ./templates/latex;
         description = "Uni Wien Latex Template";
       };
       course = {
