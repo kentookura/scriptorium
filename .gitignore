@@ -1,8 +1,9 @@
+*.djvu
+*.pdf
 .direnv/
 documents/
-frontend/
 modules/
-node_modules/
+*node_modules/
 notes/*
 package.json
 purescript-halogen-realworld/
@@ -11,3 +12,4 @@ result
 uni/
 yarn.lock
 bower_components
+*.git*
