@@ -1,5 +1,10 @@
 {pkgs ? import <nixpkgs> {}}:
-with pkgs;
+with pkgs; let
+  pythonWithPackages = pkgs.python3.withPackages (p:
+    with p; [
+      ics
+    ]);
+in
   mkShell {
     buildInputs = [
       python38

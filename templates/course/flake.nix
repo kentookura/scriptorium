@@ -15,6 +15,7 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in {
     devShells.x86_64-linux.default = import ./shell.nix {inherit pkgs;};
+    # use cal.py to make a calendar/course derivation.
     packages.x86_64-linux.default = pkgs.mkYarnPackage {
       name = "course-template";
       src = ./.;
