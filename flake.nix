@@ -7,7 +7,7 @@
     documents.url = github:kentookura/latex-flake;
     neovim.url = github:kentookura/neovim;
     doom-emacs.url = github:vlaci/nix-doom-emacs;
-    frontend.url = path:/home/kento/scriptorium/frontend;
+    frontend.url = path:./scriptorium/frontend;
     home-manager.url = github:nix-community/home-manager;
   };
 
