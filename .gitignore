@@ -1,4 +1,5 @@
 *.djvu
+output*
 *.pdf
 .direnv/
 documents/

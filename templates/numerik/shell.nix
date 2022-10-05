@@ -3,7 +3,7 @@ with pkgs;
   mkShell {
     buildInputs = [
       python38
-      julia
+      julia-bin
       jupyter
     ];
     shellHook = ''
