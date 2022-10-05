@@ -1,27 +1,36 @@
-{pkgs ? import <nixpkgs> {}}:
+{
+  pkgs ? import <nixpkgs> {},
+  config,
+}:
 with pkgs; let
+  pythonWithPackages = pkgs.python3.withPackages (p:
+    with p; [
+      icalendar
+      tox
+    ]);
 in
   mkShell {
     buildInputs = [
       pandoc
-      texlab
-      pandoc
-      texlive.combined.scheme-full
-      python38
-      vscodeKento
-      neovimKento
-      tex-match
-      latexrun
-      nodejs
-      yarn
-      yarn2nix
-      nodePackages.bower
-      nodePackages.pnpm
-      nodePackages.typescript
-      sass
-      nodejs
+      pythonWithPackages
     ];
     shellHook = ''
-      export PATH="/home/kento/scriptorium/node_modules/.bin:$PATH"
+      export DIRENV_LOG_FORMAT=
     '';
   }
+#texlab
+#texlive.combined.scheme-full
+#vscodeKento
+#neovimKento
+#tex-match
+#latexrun
+#ghostscript
+#nodejs
+#yarn
+#yarn2nix
+#nodePackages.bower
+#nodePackages.pnpm
+#nodePackages.typescript
+#sass
+#nodejs
+

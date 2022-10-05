@@ -7,6 +7,8 @@
     documents.url = github:kentookura/latex-flake;
     neovim.url = github:kentookura/neovim;
     doom-emacs.url = github:vlaci/nix-doom-emacs;
+    frontend.url = path:/home/kento/scriptorium/frontend;
+    home-manager.url = github:nix-community/home-manager;
   };
 
   outputs = {
@@ -16,7 +18,12 @@
     documents,
     neovim,
     doom-emacs,
+    frontend,
+    home-manager,
   } @ inputs: let
+    specialArgs = {
+      inherit pkgs neovim doom-emacs;
+    };
     pkgs = import inputs.nixpkgs {
       config.allowUnfree = true;
       system = "x86_64-linux";
@@ -33,7 +40,6 @@
               vscode = vscodium;
               vscodeExtensions = with vscode-extensions; [
                 james-yu.latex-workshop
-                #arrterian.nix-env-selector
                 bbenoist.Nix
                 jnoortheen.nix-ide
               ];
@@ -42,14 +48,28 @@
       ];
     };
   in rec {
-    devShells."x86_64-linux".default = import ./shell.nix {inherit pkgs;};
+    inherit frontend;
+    devShells."x86_64-linux".default = import ./shell.nix {
+      inherit pkgs;
+      config = {};
+    };
     templates = {
       default = {
         path = ./templates/default;
         description = "Uni Wien Latex Template";
       };
+      course = {
+        path = ./templates/course;
+        description = "Notes for a Course";
+      };
     };
-    homeManagerModules.doom-emacs = doom-emacs.hmModule;
+    #nixosModules =
+    #home-manager.nixosModules.home-manager
+    #{
+    #  home-manager.useGlobalPkgs = true;
+    #  home-manager.useUserPackages = true;
+    #  home-manager.extraSpecialArgs = specialArgs;
+    #};
     packages."x86_64-linux".default = documents.packages."x86_64-linux".default;
   };
 }
