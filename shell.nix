@@ -13,13 +13,14 @@ in
     buildInputs = [
       pandoc
       pythonWithPackages
+      yarn
+      neovimScriptorium
     ];
     shellHook = ''
       export DIRENV_LOG_FORMAT=
     '';
   }
 #texlab
-#texlive.combined.scheme-full
 #vscodeKento
 #neovimKento
 #tex-match

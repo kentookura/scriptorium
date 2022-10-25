@@ -27,13 +27,13 @@
       system = "x86_64-linux";
       overlays = with inputs; [
         (self: super: {
-          neovimKento = neovim.packages."x86_64-linux".neovim;
+          neovimScriptorium = neovim.packages."x86_64-linux".neovim;
         })
         (self: super: {
           doom-emacs = doom-emacs.packages."x86_64-linux".default;
         })
         (self: super: {
-          vscodeKento = with pkgs;
+          vscodeScriptorium = with pkgs;
             vscode-with-extensions.override {
               vscode = vscodium;
               vscodeExtensions = with vscode-extensions; [
