@@ -73,13 +73,13 @@
         "lastModified": 1664663854,
         "narHash": "sha256-vcLhDkrtp22q7R+ThNbIF97eBP2gkF+nX2mchA1E3Ok=",
         "owner": "kentookura",
-        "repo": "latex-flake",
+        "repo": "documents",
         "rev": "699464cb4c7eccb873ef44280c1415df62c0bf1f",
         "type": "github"
       },
       "original": {
         "owner": "kentookura",
-        "repo": "latex-flake",
+        "repo": "documents",
         "type": "github"
       }
     },

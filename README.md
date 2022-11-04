@@ -6,17 +6,9 @@ The goal of this project are:
 - provide tools that universities can use to provide materials and
   infrastructure for students
 
-## The Problem this is trying to solve
-
-The format of digital documents today arose when we first started writing on
-clay tablets. Purely geometrically, a clay tablet is not so different from an
-iPad. A flat surface is indeed a good object for displaying information. There
-is, however, an obvious and immense difference between the two. I think that we
-should try to deprecate PDFs. As a first step I propose to work on making it
-preferable to work in markup language other than $LaTeX$. I am putting a part of
-this effort into my neovim config, which you can find [here](https://github.com/kentookura/neovim). I will also provide a nixos module which
-
 ## Features
+
+- Reproducible environments for writing documents
 
 Running `nix flake show` will display the outputs of this project in a nice
 manner.

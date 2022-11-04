@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixos-21.05;
     flake-utils.url = github:numtide/flake-utils;
-    documents.url = github:kentookura/latex-flake;
+    documents.url = github:kentookura/documents;
     neovim.url = github:kentookura/neovim;
     doom-emacs.url = github:vlaci/nix-doom-emacs;
     home-manager.url = github:nix-community/home-manager;

@@ -1,0 +1,107 @@
+\ProvidesPackage{preamble}
+
+\usepackage[utf8]{inputenc}
+\usepackage[style=authoryear,backend=biber]{biblatex}
+\usepackage[T1]{fontenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{titlesec} %title formatting
+\usepackage[hidelinks]{hyperref}
+\usepackage{color}
+\usepackage[textwidth=5.5in,textheight=9.2in,centering,a4paper]{geometry}
+\usepackage{nth}
+\usepackage{quiver}
+\usepackage{tikz}
+\usepackage{mathtools} % \coloneqq
+\usepackage{mathrsfs} % fancy maths latters
+\usepackage{extpfeil} % stacked arrows
+\usepackage{lmodern}
+\usepackage{lipsum}
+\let\newfloat\undefined
+\usepackage{floatrow}
+\usepackage{caption} %customises captions
+\usepackage{subcaption} %side by side diagrams
+\usepackage{titling}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.10}
+\usepackage{asymptote}
+\usepackage[]{import}
+\usepackage{etoolbox}
+\usepackage{bussproofs}
+
+\usetikzlibrary{decorations.pathreplacing}
+
+\usetikzlibrary{patterns}
+
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+\setlength{\parindent}{0pt}
+
+\setcounter{tocdepth}{1}
+
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+
+
+
+\newextarrow{\xbigtoto}{{20}{20}{20}{20}}
+{\bigRelbar\bigRelbar{\bigtwoarrowsleft\rightarrow\rightarrow}}
+
+\makeatletter
+
+\newcommand{\Sepk}{\text{Sep\kern-.2ex/}\kern-.3ex\raisebox{-.5ex}{$k$}}
+\renewcommand{\char}{\raisebox{.3ex}{$\chi$}}
+\newcommand{\colim}{%
+	\mathop{\mathpalette\varlim@{\rightarrowfill@\scriptscriptstyle}}\nmlimits@
+}
+\newcommand{\Ext}{E\kern-0.06em x\kern-0.02em t}
+\newcommand{\indexset}[2]{ \, #1\, \in \, #2 }
+\newcommand*\centermathcell[1]{\omit\hfil$\displaystyle#1$\hfil\ignorespaces}
+\makeatother
+
+
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{reminder}[theorem]{Reminder}
+
+\newenvironment{delayedproof}[1]
+{\begin{proof}[\raisedtarget{#1}Proof of \Cref{#1}]}
+		{\end{proof}}
+\newcommand{\raisedtarget}[1]{%
+	\raisebox{\fontcharht\font`P}[0pt][0pt]{\hypertarget{#1}{}}%
+}
+
+\newcommand{\proofref}[1]{\hyperlink{#1}{proof}}
+\pagestyle{plain}
+
+
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Norm}{Norm}
+\DeclareMathOperator{\sh}{\mathsf{Sh}}
+\DeclareMathOperator{\Op}{Op}
+\DeclareMathOperator{\G}{G}
+
+\titleformat{\chapter}[hang]{\huge\bfseries}{\thechapter. \hspace{20pt}{\newline}\hspace{20pt}}{0pt}{\huge\bfseries} \titlespacing*{\chapter}{0pt}{-2\baselineskip}{1em}
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+
+\renewenvironment{proof}{{\bfseries Proof:}}{}

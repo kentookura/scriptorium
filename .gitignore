@@ -1,4 +1,5 @@
 *.djvu
+.projectile
 output*
 *.pdf
 .direnv/

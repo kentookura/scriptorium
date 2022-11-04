@@ -1,0 +1,24 @@
+\documentclass[]{article}
+\usepackage[autoload=true]{jlcode}
+\usepackage{showexpl}
+\usepackage{xcolor}
+\lstset{
+	language={Julia},
+}
+\begin{document}
+
+
+\section{Including Julia Code}
+
+\begin{jllisting}
+	# some julia code
+	println( "Here we go with Julia!")
+\end{jllisting}
+
+\jlinputlisting{hello.jl}
+
+\begin{jllisting}[caption={This is a caption}, label=mylabel]
+	println( "Here we go with Julia!")
+\end{jllisting}
+
+\end{document}
