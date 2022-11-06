@@ -1,5 +1,6 @@
 {
-  description = "LaTeX Document Demo";
+  description = "Template for writing Lecture notes with code inclusion";
+  nixConfig.bash-prompt = "\[Template\]$";
   nixConfig.extra-substituters = [
     "https://tweag-jupyter.cachix.org"
   ];
@@ -21,38 +22,35 @@
     flake-utils,
     flake-compat,
     jupyterWith,
-  } @ inputs: let
-    system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
-    texLive = import ./texlive.nix {
-      inherit
-        pkgs
-        inputs
-        system
-        ;
-    };
-    document = import ./document.nix {inherit pkgs texLive;};
-  in {
-    packages.${system}.document = document.build {
-      name = "including_julia_in_latex";
-      title = "Lecture_1";
-      root_dir = ./src;
-      root_file = "main.tex";
-    };
-    devShells.${system}.default = import ./shell.nix {inherit pkgs;};
-  };
-
-  #flake-utils.lib.eachDefaultSystem
-  #(
-  #  system: let
-  #    pkgs = nixpkgs.legacyPackages.${system};
-  #  in {
-  #    packages.${system}.default = document.build {
-  #      name = "including_julia_in_latex";
-  #      title = "Lecture_1";
-  #      root_dir = ./src;
-  #      root_file = "main.tex";
-  #    };
-  #  }
-  #);
+  } @ inputs:
+    flake-utils.lib.eachDefaultSystem
+    (
+      system: let
+        pkgs = nixpkgs.legacyPackages.${system};
+        document = import ./document.nix {inherit pkgs texLive;};
+        texLive = import ./texlive.nix {
+          inherit
+            pkgs
+            inputs
+            system
+            ;
+        };
+      in {
+        devShell = import ./shell.nix {inherit pkgs;};
+        packages = flake-utils.lib.flattenTree {
+          with_output = document.build {
+            name = "including_julia_in_latex";
+            title = "Lecture_1";
+            root_dir = ./without_output;
+            root_file = "main.tex";
+          };
+          without_output = document.build {
+            name = "including_julia_in_latex";
+            title = "Lecture_1";
+            root_dir = ./with_output;
+            root_file = "main.tex";
+          };
+        };
+      }
+    );
 }

@@ -1,0 +1,44 @@
+\documentclass[11pt]{article}
+\usepackage{polyglossia}
+\setmainlanguage[variant=german]{german}
+\usepackage{listings}
+
+\newenvironment{julia}{\directlua{start_julia(true)}}{}
+\newenvironment{julia*}{\directlua{start_julia(false)}}{}
+\directlua{dofile("mwe.lua")}
+\setlength{\parindent}{0pt}
+\begin{document}
+$20!=
+\begin{julia*}
+function fac(n)
+    res = 1
+    for i = 1:n
+        res = res * i
+    end
+    return res
+end
+print(fac(20))
+\end{julia*}$
+
+$e\approx
+\begin{julia*}
+begin
+    local res = 1
+    local fac = 1
+    for i = 1:20
+        fac = fac * i
+        res = res + 1/fac
+    end
+    print(res)
+end
+\end{julia*}$
+
+Thanks to terrible hacks,
+\begin{julia*}
+print("any valid Julia code is fine, even if LaTeX wouldn't parse it \x41%}}&#\\{")
+\end{julia*}
+\begin{julia}
+#With a source listing:
+print(1 + 2)
+\end{julia}
+\end{document}

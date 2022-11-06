@@ -2,6 +2,7 @@
 with pkgs;
   mkShell {
     buildInputs = [
+      #julia-lts-bin
       texlab
       pandoc
       entr
